@@ -14,5 +14,9 @@ int main()
 
     cout<<"array at 2nd index :"<<a.at(1)<<endl;
     cout<<"array at 3rd index :"<<a.at(2)<<endl;
+
+    /*fetching first and last element*/
+    cout<<"first element :"<<a.front()<<endl;
+    cout<<"last element :"<<a.back()<<endl;
     return 0;
 }
