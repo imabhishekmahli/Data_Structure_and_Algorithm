@@ -9,7 +9,10 @@ int main()
     int size = a.size();
     for (int i=0;i<size;i++)
     {
-        cout<<a[i]<<" ";
+        cout<<a[i]<<" "<<endl;
     }
+
+    cout<<"array at 2nd index :"<<a.at(1)<<endl;
+    cout<<"array at 3rd index :"<<a.at(2)<<endl;
     return 0;
 }
