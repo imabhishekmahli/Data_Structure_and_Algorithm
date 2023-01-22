@@ -2,17 +2,17 @@
 #include<string>
 using namespace std;
 
-struct student
+typedef struct student
 {
     /* data */
     int roll;
     string name;
     float percentage;
-};
+}st;
 
 int main()
 {
-    struct student abhi;
+    st abhi;
     abhi.name = "Abhishek Kumar";
     abhi.roll = 01;
     abhi.percentage = 83.4;
