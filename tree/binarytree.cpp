@@ -19,11 +19,19 @@ void preorder(struct node *root){
     if(root==NULL){
         return;
     }
-    cout<<root->data<<" ";
+    cout<<root->data<<" \n";
     preorder(root->left);
     preorder(root->right);
 }
 
+void inorder(struct node *root){
+    if(root==NULL){
+        return;
+    }
+    inorder(root->left);
+    cout<<root->data<<" ";
+    inorder(root->right);
+}
 int main()
 {
     struct node *root = new node(1);
@@ -42,6 +50,7 @@ int main()
     root->right->right = new node(7);
 
     preorder(root);
+    inorder(root);
 
     return 0;
 }
