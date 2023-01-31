@@ -7,6 +7,15 @@ struct node{
     struct node *next;
 };
 
+// insertion at the start
+struct node *insertatfirst(struct node *head, int data)
+{
+    struct node *ptr = (struct node *)malloc(sizeof(struct node));
+    ptr->next = head;
+    ptr->data = data;
+    return ptr;
+}
+
 void display(struct node *ptr)
 {
     while(ptr!=NULL)
@@ -43,6 +52,11 @@ int main()
     sixth->data = 150;
     sixth->next = NULL;
 
+    cout<<"list :";
+    display(head);
+    cout<<endl;
+    cout<<"list after insertion :";
+    head = insertatfirst(head, 200);
     display(head);
 
     return 0;
