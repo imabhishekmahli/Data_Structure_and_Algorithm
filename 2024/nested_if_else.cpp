@@ -7,22 +7,40 @@ int main()
     cout<<"enter your marks :";
     cin>>marks;
 
+    // if(marks>=90){
+    //     cout<<"excellent";
+    // }
+    // else{
+    //     if(marks>=80){
+    //         cout<<"very good";
+    //     }
+    //     else{
+    //         if(marks>=70){
+    //             cout<<"very good";
+    //         }
+    //         else{
+    //             if(marks>=60){
+    //                 cout<<"good";
+    //             }
+    //         }
+    //     }
+    // }
+
     if(marks>=90){
-        cout<<"excellent";
+        cout<<"A";
+    }
+    else if(marks>=80)
+    {
+        cout<<"B";
+    }
+    else if(marks>=70)
+    {
+        cout<<"C";
     }
     else{
-        if(marks>=80){
-            cout<<"very good";
-        }
-        else{
-            if(marks>=70){
-                cout<<"very good";
-            }
-            else{
-                if(marks>=60){
-                    cout<<"good";
-                }
-            }
-        }
+        cout<<"not valid";
     }
+
+
+    return 0;
 }
