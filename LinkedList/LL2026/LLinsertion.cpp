@@ -16,6 +16,13 @@ void printLL(Node* n)
   cout<<"NULL"<<endl;
 }
 
+void insertionAtBeginning(Node* &head, int value)
+{
+  Node* newNode = new Node();
+  newNode->data = value;
+  newNode->next = head;
+  head = newNode;
+}
 int main()
 {
   Node* head = NULL;
@@ -37,11 +44,14 @@ int main()
 
   printLL(head);
   
-  Node* newNode = new Node();
-  newNode->data = 5;
-  newNode->next = head;
-  head = newNode;
-  cout<<"After Insertion at Beginning: ";
+  // Node* newNode = new Node();
+  // newNode->data = 5;
+  // newNode->next = head;
+  // head = newNode;
+  insertionAtBeginning(head, 5);
+  insertionAtBeginning(head, 4);
+  insertionAtBeginning(head, 3);
+  cout<<"After Insertion at Beginning: "<<endl;
   printLL(head);
 
   return 0;
