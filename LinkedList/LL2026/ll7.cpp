@@ -51,9 +51,13 @@ void insertAtEnd(Node* head, int value)
    temp->next=newNode;
 }
 
-void deleteAtBeginning(Node* head)
+void deleteAtBeginning(Node* &head)
 {
+  if(head==NULL) return;
 
+  Node* temp = head;
+  head=head->next;
+  delete temp;
 }
 
 void printLL(Node* n)
@@ -74,6 +78,7 @@ int main()
   insertAtBetween(head,50,30);
   insertAtEnd(head,15);
   insertAtEnd(head,5);
+  deleteAtBeginning(head);
   printLL(head);
   return 0;
 }
