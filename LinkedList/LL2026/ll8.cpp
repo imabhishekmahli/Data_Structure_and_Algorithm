@@ -59,6 +59,25 @@ void deleteLL(Node* &head)
   delete temp;
 }
 
+int findMax(Node* head) {
+    if (head == NULL) {
+        return -1;  // empty list (handle as needed)
+    }
+
+    int maxElement = head->data;
+    Node* temp = head;
+
+    while (temp != NULL) {
+        if (temp->data > maxElement) {
+            maxElement = temp->data;
+        }
+        temp = temp->next;
+    }
+
+    cout<<maxElement;
+}
+
+
 void printLL(Node* n)
 {
   while(n!=NULL)
@@ -77,6 +96,7 @@ int main()
   insertInBetween(head,20,50);
   insertAtEnd(head,60);
   deleteLL(head);
+  findMax(head);
   printLL(head);
   return 0;
 }
